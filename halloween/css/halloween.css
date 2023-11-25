@@ -1,0 +1,164 @@
+/******************************************************************/
+/*                  Style for halloween exercise                  */
+/*                     Author: Alba Romero                        */
+/*                     Date: November 2023                        */
+/*        Comment: My first exercise with js functions            */
+/******************************************************************/
+
+/******************************STAGE*******************************/
+
+body {background-color: black;}
+
+#escenario {width: 1500px;
+        height: 1000px;
+        background-image: url(../img/background.png);
+        background-size: cover;
+        height: 100vh;
+        margin: auto;
+        position: relative;}
+
+#moon   {width: 192px;
+        height: 160px;               
+        position: absolute;
+        top: 134px;
+        left: 350px;}
+
+#bats  {width: 170px;
+        height: 180px;               
+        position: absolute;
+        top: 134px;
+        left: 280px;
+        visibility: hidden;} 
+
+#house    {width:70px;
+        height: 110px;
+        position: absolute;
+        top: 440px;
+        left: 165px;}
+
+#skeleton    {width: 350px;
+        height: 250px;
+        position: absolute;
+        top: 490px;
+        left: 240px;
+        visibility: hidden;}
+
+#pumpkin    {width:150px;
+        height: 100px;
+        position: absolute;
+        top: 595px;
+        left: -110px;}
+
+#vampire    {width: 360px;
+        height: 250px;
+        position: absolute;
+        top: 380px;
+        left: 30px;
+        visibility: hidden;}
+
+
+/*************************TEXTS****************************/
+
+@font-face {
+        font-family: major;
+        src: url(../font/shlop\ rg.otf);}
+
+@font-face {
+        font-family: one;
+        src: url(../font/Something\ Strange.ttf);}
+
+@font-face {
+        font-family: two;
+        src: url(../font/Nightbird.ttf);}
+
+.introdution1 {color : white;
+        font-size: xx-large;
+        font-family: major;
+        position: absolute;
+        padding: 0%;
+        text-align: center;
+        top: -1%;
+        left: 23%;}
+
+.introdution2 {color : white;
+        font-size: xx-large;
+        font-family: major;
+        position: absolute;
+        padding: 0%;
+        text-align: center;
+        top: 40%;
+        left: 28%;}
+
+.invitation {color : white;
+        font-size: large;
+        font-family: major;
+        position: absolute;
+        top: 280%;
+        left: 46%;}
+
+#moontext {font-size: 0.5em;
+        font-family: two;
+        width: max-content;
+        position: absolute;
+        top: 10%;
+        left: -40%;
+        opacity: 1;                            
+        animation-name: showmoontext;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;}
+
+#housetext {font-size: 0.6em;
+        font-family: one;
+        width: max-content;
+        position: absolute;
+        top: 500%;
+        left: 26%;
+        opacity: 1;                            
+        animation-name: showhousetext;
+        animation-duration: 12s;
+        animation-iteration-count: infinite;}
+
+#pumpkintext {font-size: 0.5em;
+        font-family: two;
+        width: max-content;
+        position: absolute;
+        top: 500%;
+        left: -40%;
+        opacity: 1;                            
+        animation-name: showpumpkintext;
+        animation-duration: 5s;
+        animation-iteration-count: infinite;}
+
+
+@keyframes showmoontext {
+
+        from {opacity: 0; 
+        color: aliceblue;}
+
+        to {opacity: 1;
+        color: orangered;}
+}
+
+@keyframes showhousetext {
+
+        from {opacity: 0; 
+        color: aliceblue;}
+
+        to {opacity: 1;
+        color: rgb(255, 255, 255);}
+}
+
+@keyframes showpumpkintext {
+
+        from {opacity: 0; 
+        color: aliceblue;}
+
+        to {opacity: 1;
+        color: orangered;}
+}
+
+/*************************CONTROLS SOUNDS****************************/
+
+audio  {width: 0%;
+        height: 0%;
+        opacity: 0;}

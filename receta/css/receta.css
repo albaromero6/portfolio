@@ -1,0 +1,89 @@
+/******************************************************/
+/*            Estilo para Receta.html                 */
+/*         Autora: Alba Romero Almansa                */
+/*                  Versión: 1.0                      */
+/*            Fecha: octubre de 2023                  */
+/*    Comentario: Primera entrega portfolio           */
+/******************************************************/
+
+@font-face { 
+    font-family: titulos;
+    src: url(../font/FjallaOne-Regular.ttf)  
+}
+@font-face { 
+    font-family: textos;
+    src: url(../font/HindSiliguri-Medium.ttf)  
+}
+
+@font-face { 
+    font-family: blockquote;
+    src: url(../font/PTSerif-Italic.ttf)
+}
+
+/*Poner SIEMPRE que utilicemos un layaout complejo*/
+/*Las medidas de ancho y alto se deben calcular del borde hacia adentro*/
+
+* /*{box-sizing: border-box;}*/
+
+#hero {background-image: url(../img/hero.jpg);
+    height: 100vh;                                      /*El 95% del alto de la ventana del navegador*/
+    background-size: cover;                              /*Estira la imagen*/
+    background-position:100%;
+    border-bottom: 3px solid #ffffff;}               /*Puedo poner porcentajes para coger otra parte (33% o 66%)*/
+
+
+body {background-image: url(../img/pattern.webp);
+    margin:0;padding: 0;                                                                        /*Para que el wrapper se pegue a body*/
+    font-size: 1.2em;                                                                    /*Em y rem son medidas exclusivas para textos*/
+}
+
+#wrapper {width:75%;                                                                            /*Para width la medida suele ir en porcentaje*/
+        margin:auto;
+        padding: 5%;
+        background-color:#f9ccce
+}
+
+
+h1, h2 {font-family:titulos;}
+
+h2 {padding-top: 30px;}
+
+body {font-family: textos;}
+
+blockquote {font-style: italic;
+            text-align: center;
+            border: 3px solid rgb(255, 255, 255);
+            background-color: #fcd6d8;
+            padding: 10px;
+            font-family: blockquote;
+            font-weight: bold;
+}
+
+ul {list-style-image: url();}
+
+/*header {background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+}*/
+
+dt {font-weight: bold;
+    font-variant: small-caps;                                     /*Pone todo en mayúsculas pero mantiene las primeras más grandes*/
+    color:hsl(0, 0%, 0%)
+}
+
+img {float:right;                                                 /*Foma de colocar la imagen pegada a la derecha.Si la quiero centrar*/ 
+    width:40%;}                                                   /*Espacio que ocupa en su bloque contenedor*/
+
+
+
+
+/**************************************** RESPONSIVIDAD *****************************************/
+/****************** VAMOS A HACER QUE EL WRAPPER PASE AL 100% EN MOVILES ************************/
+/********************************** ATENCIÓN: MEDIA QUERY ***************************************/
+
+@media only screen and (width<700px) {
+        #wrapper {width:80%}                       /*Redefino el ancho del wrapper para el movil*/
+        blockquote {width:50%;}
+        img {width:50%;}
+}

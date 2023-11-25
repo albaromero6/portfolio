@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My halloween party!</title>
+    <link rel="stylesheet" href="./css/halloween.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <script src="./js/halloween.js"></script>
+</head>
+<body>
+    <div id="escenario">
+        <div class="introdution1">
+            <p>The most terrifying creatures and me, want to invite you to my halloween party!</p>
+        <div class="introdution2">
+            <p>Bring your costume and don't miss</p> 
+        </div>
+        <div class="invitation">
+            <p>Day: 23 december</p>
+            <p>Hour: 22:00</p>
+            <p>Place: My house</p>
+        </div>
+        <div id="moon" onmouseover="show('bats');sound('batssound')" onmouseout="hide('bats');silence('batssound')"></div>
+        <div id="moontext">Be carefoul with the moon...</div>
+        <img id="bats" src="./img/bats.gif">
+
+        <div id="house" onmouseover="show('skeleton');hide('housetext');sound('skeletonsound')" onmouseout="hide('skeleton');show('housetext');silence('skeletonsound')"></div>
+        <div id="housetext">Knock on the door of the big house, someone is waiting for you</div>
+        <img id="skeleton" src="./img/skeleton.gif">
+
+        <div id="pumpkin" onmouseover="show('vampire');sound('vampiresound')" onmouseout="hide('vampire');silence('vampiresound')"></div>
+        <div id="pumpkintext">Don't touch the pumpkin, it's dangerous</div>
+        <img id="vampire" src="./img/vampire.gif" alt="">      
+
+        <audio id="batssound" controls autoplay reload="">     
+                <source src="../halloween/sound/scream.mp3" type="audio/mp3">
+        </audio>
+        <audio id="skeletonsound" preload="">     
+            <source src="../halloween/sound/doorsound.mp3" type="audio/mp3">
+        </audio>
+        <audio id="vampiresound" preload="">     
+            <source src="../halloween/sound/dracula.mp3" type="audio/mp3">
+        </audio>
+    </div>
+</body>
+</html>
